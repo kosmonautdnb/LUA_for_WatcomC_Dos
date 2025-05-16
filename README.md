@@ -1,4 +1,4 @@
-# LUA_for_WatcomC_Dos
+# LUA for WatcomC Dos
 LUA5.4.7 for WatcomC (e,g, FreeDOS)
 
 Taken from here: https://github.com/lua/lua
