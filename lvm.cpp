@@ -340,7 +340,7 @@ void luaV_finishset (lua_State *L, const TValue *t, TValue *key,
       tm = fasttm(L, h->metatable, TM_NEWINDEX);  /* get metamethod */
       if (tm == NULL) {  /* no metamethod? */
         luaH_finishset(L, h, key, slot, val);  /* set new value */
-        invalidateTMcache(h);
+        invalidateTMcache2(h);
         luaC_barrierback(L, obj2gco(h), val);
         return;
       }

@@ -20,7 +20,8 @@
 ** may have any of these metamethods. (First access that fails after the
 ** clearing will set the bit again.)
 */
-#define invalidateTMcache(t)	((t)->flags &= ~maskflags)
+//#define invalidateTMcache(t)	((t)->flags &= ~maskflags)
+#define invalidateTMcache2(t)	((t)->flags &= (unsigned char)~maskflags) // :mad: added
 
 
 /* true when 't' is using 'dummynode' as its hash part */
